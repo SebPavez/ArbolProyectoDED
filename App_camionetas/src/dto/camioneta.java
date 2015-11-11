@@ -56,7 +56,11 @@ public class Camioneta {
     }
 
     public void setMarca(String marca) {
-        this.marca = marca;
+        if(     marca.equalsIgnoreCase("Toyota")|| 
+                marca.equalsIgnoreCase("Chevrolet")||
+                marca.equalsIgnoreCase("Suzuki")||
+                marca.equalsIgnoreCase("Ford"))
+            this.marca = marca;
     }
 
     public int getAnjoFabricacion() {
@@ -64,7 +68,8 @@ public class Camioneta {
     }
 
     public void setAñoFabricacion(int anjoFabricacion) {
-        this.anjoFabricacion = anjoFabricacion;
+        if(anjoFabricacion>=1990&&anjoFabricacion<=2015)
+            this.anjoFabricacion = anjoFabricacion;
     }
 
     public String getColor() {
@@ -80,15 +85,21 @@ public class Camioneta {
     }
 
     public void setTonelaje(double tonelaje) {
-        this.tonelaje = tonelaje;
+        if(tonelaje>0)
+            this.tonelaje = tonelaje;
     }
 
     public String getTipoCombustible() {
+        
         return tipoCombustible;
     }
 
     public void setTipoCombustible(String tipoCombustible) {
-        this.tipoCombustible = tipoCombustible;
+        //diesel bencina gas
+        if(     tipoCombustible.equalsIgnoreCase("diesel")||
+                tipoCombustible.equalsIgnoreCase("gas")||
+                tipoCombustible.equalsIgnoreCase("gas"))
+            this.tipoCombustible = tipoCombustible;
     }
 
     public int getKilometraje() {
@@ -96,7 +107,8 @@ public class Camioneta {
     }
 
     public void setKilometraje(int kilometraje) {
-        this.kilometraje = kilometraje;
+        if(kilometraje>0)
+            this.kilometraje = kilometraje;
     }
 
     public int getKilometroPorLitro() {
@@ -104,7 +116,8 @@ public class Camioneta {
     }
 
     public void setKilometroPorLitro(int kilometroPorLitro) {
-        this.kilometroPorLitro = kilometroPorLitro;
+        if(kilometroPorLitro>0)
+            this.kilometroPorLitro = kilometroPorLitro;
     }
 
     public int getPrecio() {
@@ -112,7 +125,8 @@ public class Camioneta {
     }
 
     public void setPrecio(int precio) {
-        this.precio = precio;
+        if(precio>0)
+            this.precio = precio;
     }
 
     public int getScore() {
@@ -148,8 +162,7 @@ public class Camioneta {
             return false;
         }
         return true;
-    }
-    
+    } 
     
     
     
