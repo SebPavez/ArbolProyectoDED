@@ -2,6 +2,7 @@
 package dao;
 import dto.Camioneta;
 
+
 public class CamionetaDao {
 private Arbol camionetas;
 
@@ -19,5 +20,11 @@ public void mostrarCamionetas(){
     this.camionetas.recorrerPreOrden();
 }
     
+public void AsignarPuntaje()
+{
+    if(txtAnjoFabricacion)
     
+    
+}
+
 }
